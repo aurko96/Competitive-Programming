@@ -1,0 +1,62 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char a[1000],b[1000],c[1000];
+    int i,j,m,n,p,temp,count=0;
+    scanf("%s %s %s",&a,&b,&c);
+    m=strlen(a);
+    n=strlen(b);
+    p=strlen(c);
+    for(i=0;i<n;i++)
+    {
+        a[m+i]=b[i];
+    }
+    for(i=0;i<m+n-1;i++)
+    {
+        for(j=0;j<m+n-1;j++)
+        {
+            if(a[j]>a[j+1])
+            {
+                temp=a[j+1];
+                a[j+1]=a[j];
+                a[j]=temp;
+            }
+        }
+    }
+    for(i=0;i<p-1;i++)
+    {
+        for(j=0;j<p-1;j++)
+        {
+            if(c[j]>c[j+1])
+            {
+                temp=c[j+1];
+                c[j+1]=c[j];
+                c[j]=temp;
+            }
+        }
+    }
+    for(i=0;i<p;i++)
+    {
+        if(a[i]==c[i])
+        {
+            count++;
+        }
+    }
+    if(p==m+n)
+    {
+        if(count==p)
+        {
+            printf("YES");
+        }
+        else
+        {
+            printf("NO");
+        }
+    }
+    else
+    {
+        printf("NO");
+    }
+
+}

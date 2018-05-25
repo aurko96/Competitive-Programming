@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1508677560 source:c:\users\zahin zaman\desktop\classes and objects\class\dog.cpp
+	"Dog.h"
+	<iostream>
+
+1508677546 c:\users\zahin zaman\desktop\classes and objects\class\dog.h
+
+1446667744 source:c:\users\zahin zaman\desktop\classes and objects\class\main.cpp
+	<iostream>
+
+1508678921 source:f:\class\dog.cpp
+	"Dog.h"
+	<iostream>
+	<string>
+
+1508678921 f:\class\dog.h
+	<string>
+
+1508678921 source:f:\class\main.cpp
+	<iostream>
+	<string>
+	"Dog.h"
+

@@ -1,0 +1,55 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long i,j,n,m,k,x=0,y,z,a[100000],b[100000],c;
+    cin>>n>>m;
+    for(i=0;i<n;i++)
+    {
+        cin>>a[i];
+    }
+    for(i=0;i<m;i++)
+    {
+        cin>>b[i];
+    }
+    for(i=0,j=0,k=1;i<n-1,j<m;)
+    {
+        if(k<0)
+        {
+            k=1;
+        }
+        if((i+1)!=b[j])
+        {
+            x=x+(b[j]*a[i]);
+            i++;
+            cout<<x<<endl;
+        }
+        if(j>0)
+        {
+            if((i+1)==b[j-1])
+            {
+                continue;
+            }
+        }
+        if(i==n-2)
+        {
+            j++;
+            i=0;
+        }
+    }
+    for(i=0;i<n-1,j<m;)
+    {
+        if((i+1)==b[j] || (i+2)==b[j])
+        {
+            j++;
+            continue;
+        }
+        else
+        {
+            x=x+(a[i]*a[i+1]);
+            i++;
+            cout<<x<<endl;
+        }
+    }
+    cout<<x<<endl;
+}
